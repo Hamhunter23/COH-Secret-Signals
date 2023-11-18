@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Encryption App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    .input-field {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+    }
+    #imageFile, #textMessage {
+      width: 100%;
+    }
+    #encryptButton, #decryptButton {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    #decryptButton {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Image Encryption App</h1>
+    <form id="encryptionForm">
+      <input type="file" id="imageFile" accept="image/*" class="input-field">
+      <input type="text" id="textMessage" class="input-field" rows="4" placeholder="Enter Text">
+      <button type="button" id="encryptButton" class="input-field">Encrypt</button>
+      <button type="button" id="decryptButton" class="input-field">Decrypt and Download</button>
+    </form>
+  </div>
+
+  <script>
+    const imageFileInput = document.getElementById('imageFile');
+    const textMessageInput = document.getElementById('textMessage');
+    const encryptButton = document.getElementById('encryptButton');
+    const decryptButton = document.getElementById('decryptButton');
+
+    encryptButton.addEventListener('click', () => {
+      // Implement your encryption logic here using imageFileInput and textMessageInput values.
+      // After encryption, display the "Decrypt and Download" button.
+      decryptButton.style.display = 'block';
+    });
+
+    decryptButton.addEventListener('click', () => {
+      // Implement your decryption and download logic here.
+      alert('Decryption and download logic will be added later.');
+    });
+  </script>
+</body>
+</html>

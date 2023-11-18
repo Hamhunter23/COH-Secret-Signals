@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image in Image Encryption App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    .input-field {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+    }
+    #image1, #image2 {
+      width: 100%;
+    }
+    #encryptButton, #decryptButton {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    #decryptButton {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Image in Image Encryption App</h1>
+    <form id="encryptionForm">
+      <input type="file" id="image1" accept="image/*" class="input-field">
+      <input type="file" id="image2" accept="image/*" class="input-field">
+      <button type="button" id="encryptButton" class="input-field">Encrypt</button>
+      <button type="button" id="decryptButton" class="input-field">Decrypt and Download</button>
+    </form>
+  </div>
+
+  <script>
+    const image1Input = document.getElementById('image1');
+    const image2Input = document.getElementById('image2');
+    const encryptButton = document.getElementById('encryptButton');
+    const decryptButton = document.getElementById('decryptButton');
+
+    encryptButton.addEventListener('click', () => {
+      // Implement your encryption logic here using image1Input and image2Input values.
+      // After encryption, display the "Decrypt and Download" button.
+      decryptButton.style.display = 'block';
+    });
+
+    decryptButton.addEventListener('click', () => {
+      // Implement your decryption and download logic here.
+      alert('Decryption and download logic will be added later.');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-type Encryption App</title>
+  <link rel="stylesheet" href="abc.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Multi-type Encryption App</h1>
+    <form id="encryptionForm">
+      <label>Select Encryption Type:
+        <select id="encryptionType" name="encryptionType">
+          <option value="imageInImage">Image in Image</option>
+          <option value="textInAudio">Text in Audio</option>
+          <option value="textInImage">Text in Image</option>
+          <option value="textInText">Text in Text</option>
+        </select>
+      </label>
+
+      <div class="input-group">
+        <div class="conditional-input" id="imageOrAudioInput1">
+          <label for="imageOrAudio1">Upload Image or Audio 1:
+            <input type="file" id="imageOrAudio1" name="imageOrAudio1" accept="image/*, audio/*">
+          </label>
+        </div>
+
+        <div class="conditional-input" id="imageOrAudioInput2">
+          <label for="imageOrAudio2">Upload Image or Audio 2:
+            <input type="file" id="imageOrAudio2" name="imageOrAudio2" accept="image/*, audio/*">
+          </label>
+        </div>
+
+        <div class="conditional-input" id="textInput">
+          <label for="text">Enter Text 1:
+            <input type="text" id="text" name="text">
+          </label>
+        </div>
+      </div>
+      <div class="conditional-input" id="textInput2">
+        <label for="text">Enter Text 2:
+          <input type="text" id="text" name="text">
+        </label>
+      </div>
+    </div>
+
+      <button type="submit">Encrypt</button>
+    </form>
+    <p></p>
+    <p></p>
+  </div>
+
+  <script>
+    const encryptionTypeSelect = document.getElementById('encryptionType');
+    const imageOrAudioInput1 = document.getElementById('imageOrAudioInput1');
+    const imageOrAudioInput2 = document.getElementById('imageOrAudioInput2');
+    const textInput1 = document.getElementById('textInput1');
+    const textInput2 = document.getElementById('textInput2');
+    
+    encryptionTypeSelect.addEventListener('change', (event) => {
+      const selectedValue = event.target.value;
+      if (selectedValue === 'imageInImage') {
+        imageOrAudioInput1.style.display = 'block';
+        imageOrAudioInput2.style.display = 'block';
+        textInput.style.display = 'none';
+        textInput2.style.display = 'none';
+      } else if (selectedValue === 'textInAudio') {
+        imageOrAudioInput1.style.display = 'block';
+        imageOrAudioInput2.style.display = 'none';
+        textInput.style.display = 'block';
+        textInput2.style.display = 'none';
+      } else if (selectedValue === 'textInImage') {
+        imageOrAudioInput1.style.display = 'block';
+        imageOrAudioInput2.style.display = 'none';
+        textInput.style.display = 'block';
+        textInput2.style.display = 'none';
+      } else if(selectedValue==='textInText'){
+        imageOrAudioInput1.style.display = 'none';
+        imageOrAudioInput2.style.display = 'none';
+        textInput.style.display = 'block';
+        textInput2.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
