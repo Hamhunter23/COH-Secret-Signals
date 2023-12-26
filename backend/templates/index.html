@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <form method="post" action="/">
+    {% csrf_token %}
+    <label for="upload">Upload: </label>
+    <input type="file" name="upload" id="upload">
+    <input type="submit" name="submit" id="submit" onclick="alert_func()">
+  </form>
+
+  <img src="{{MEDIA_URL}}etclogo1.png" alt="nope">
+  <script>
+    function alert_func() {
+      alert("Your Image Has been submitted successfully");
+    }
+  </script>
+</body>
+</html>
