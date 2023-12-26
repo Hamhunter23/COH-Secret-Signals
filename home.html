@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+  <div class="navbar">
+    <div>
+      <a href="#highlights" onclick="scrollToSection('section2')">Highlights</a>
+      <a href="#speaker" onclick="scrollToSection('section3')">Speaker</a>
+      <a href="#register" onclick="scrollToSection('section4')">Register</a>
+    </div>
+    <div>
+      <a href="#encrypter" onclick="scrollToSection('section5')">Text Encrypter</a>
+    </div>
+  </div>
+  <div class="content">
+    <section class="section1">
+      <h2>Secret Signals</h2>
+      <p>Hide your messages in the best way possible</p>
+    </section>
+    <section class="section2" id="highlights">
+      <h2>App Highlights</h2>
+      <p>ENCRYPT AND DECRYPT YOUR MESSAGES AT ONE PLACE</p>
+      <p>MULTIPLE MEDIA TYPES TO CHOOSE FROM</p>
+      <p>EASY IMPLEMENTATION USING READILY AVAILABLE LIBRARIES</p>
+    </section>
+    <section class="section3" id="speaker">
+      <h2>Audio Encoder</h2>
+      <p>SECRET SIGNALS</p>
+      <p>An app that makes covert communication 'ACCESSIBLE'</p>
+      <p>You can share SECRETS with your friends, family, or lovers without anyone else knowing</p>
+      <p>Secrets here refer to the data hidden in the media</p>
+    </section>
+    <section class="section4" id="register">
+      <h2>App Beta Test now open!</h2>
+      <p>Key Features:</p>
+      <ul>
+        <li>Redundant Pattern Encoding (RPE)</li>
+        <li>LSB Insertion</li>
+        <li>Encrypt and Scatter</li>
+        <li>Algorithms and transformations</li>
+        <li>Echo Hiding in Audio</li>
+      </ul>
+      <p>Get access now. Try it for free</p>
+      <button class="try-button" onclick="window.location.href='gn.html'">TRY NOW</button>
+    </section>
+    <section class="section5" id="encrypter">
+      <h2>Text Encrypter</h2>
+      <p>This is a placeholder for the Text Encrypter section.</p>
+      <!-- You can add your Text Encrypter content here. -->
+    </section>
+  </div>
+  <div class="team-section">
+    <button class="top-button" onclick="scrollToTop()">Go to Top</button>
+  </div>
+  <script>
+    // Function to scroll to the top of the page
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Function to scroll to the target section smoothly
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  </script>
+</body>
+</html>
